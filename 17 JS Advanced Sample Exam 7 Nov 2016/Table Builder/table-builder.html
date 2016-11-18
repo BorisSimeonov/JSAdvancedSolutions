@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Builder</title>
+    <style>td,th { background:#DDD; padding:5px }</style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="table-builder.js"></script>
+</head>
+<body>
+<div id="main">
+    <span>Text to be removed</span>
+</div>
+<script>
+    $(function() {
+        let builder = tableBuilder("#main");
+        builder.createTable(['Name', 'Town', 'Age', 'Pollution']);
+        builder.fillData([
+            ['Maria', 'Sofia', '233', '96%'],
+            ['Kiril', 'Varna', '422', '76%'],
+            ['Ani <new>', 'Ruse', '422', '76%'],
+            ['Maria', 'Sofia', '233', '96%'],
+            ['Maria', 'Sofia', '233', '96%'],
+            ['Maria', 'Sofia', '233', '96%']
+        ]);
+    });
+</script>
+</body>
+</html>
